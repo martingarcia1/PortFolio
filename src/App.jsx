@@ -3,13 +3,22 @@ import Proyects from './components/proyects'
 import Presentation from './components/presentation'
 import Footer from './components/footer'
 import './App.css'
+import { BrowserRouter, Routes } from 'react-router-dom'
 
 function App() {
   return (
     <>
-      <Proyects></Proyects>
-      <Presentation></Presentation>
-      <Footer></Footer>
+      <banner></banner>
+      <BrowserRouter>
+        <div className='app'>
+          <Navbar />
+          <Routes>
+            <Proyects></Proyects>
+            <Presentation></Presentation>
+            <Footer></Footer>
+          </Routes>
+        </div>
+      </BrowserRouter>
     </>
   )
 }
